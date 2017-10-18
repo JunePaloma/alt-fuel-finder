@@ -11,9 +11,10 @@ describe "feature" do
             fill_in("q", :with => "80203", :visible => false)
           end
           click_on("Locate")
-    expect(path).to eq ("/search")
+
     # with parameters visible in the url
     expect(page).to have_css('.station', :count => 10)
+    expect(current_path).to eq ("/search")
     #within 6 miles sorted by distance
     #the stations should be limited to Electric and Propane
     # expect(page).to have_css('#name', :count => 10)
