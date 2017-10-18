@@ -8,7 +8,7 @@ describe "feature" do
          it 'for each stations, I see the name, address, fuel type, distace, and access times' do
           visit "/"
           within(".search-field") do
-            fill_in("#q", :with => "8020")
+            fill_in("#q", :with => "8020", :disabled => true)
           end
           click_on("Locate")
     expect(path).to eq ("/search")
