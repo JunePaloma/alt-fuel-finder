@@ -1,10 +1,10 @@
 class Station
 
   def initialize(data)
-    @name = data[:name]
-    @fuel_type = data[:fuel_type]
+    @name = data[:station_name]
+    @fuel_type = data[:fuel_type_code]
     @distance = data[:distance]
-    @access_times = data[:access_times]
+    @access_times = data[:access_days_time]
   end
 
   attr_reader :name, :fuel_type, :distance, :access_times
