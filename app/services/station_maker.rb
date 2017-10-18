@@ -4,9 +4,9 @@ class StationMaker
   end
 
   def make_stations
-    @station_data. each do |station|
+    @station_data.each do |station|
       Station.new(station)
-    end 
+    end
   end
 
 end
