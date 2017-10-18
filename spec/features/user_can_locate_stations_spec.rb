@@ -16,10 +16,10 @@ describe "feature" do
     expect(page).to have_css('.station', :count => 10)
     #within 6 miles sorted by distance
     #the stations should be limited to Electric and Propane
-    expect(page).to have_css('.name', :count => 10)
-    expect(page).to have_css('.fuel types', :count => 10)
-    expect(page).to have_css('.distance', :count => 10)
-    expect(page).to have_css('.access times', :count => 10)
+    # expect(page).to have_css('#name', :count => 10)
+    # expect(page).to have_css('#fuel types', :count => 10)
+    # expect(page).to have_css('#distance', :count => 10)
+    # expect(page).to have_css('#access times', :count => 10)
           end
         end
       end
