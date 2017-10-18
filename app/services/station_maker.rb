@@ -4,14 +4,8 @@ class StationMaker
   end
 
   def make_stations
-    @station_data.each do |station|
+    @station_data.map do |station|
       Station.new(station)
     end
-  end
-
-  def present_stations
-    stations = make_stations
-    stations.each do |station|
-      
   end
 end
