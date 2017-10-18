@@ -1,0 +1,6 @@
+<h1>Enter a zip code to search NREL stations</h1>
+<%= form_for @search do |f| %>
+<%= f.label :search %>
+<%= f.text_field :search %><br />
+<%= f.submit :locate %>
+<% end %>

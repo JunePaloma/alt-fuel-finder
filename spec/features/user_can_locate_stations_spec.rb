@@ -7,7 +7,8 @@ describe "feature" do
        describe "and takes me to a page displaying a limit of 10  electric and propane stations within 6 miles" do
          it 'for each stations, I see the name, address, fuel type, distace, and access times' do
           visit "/"
-          fill_in('search', :with => "8020")
+
+          fill_in("input#q.form-control", :with => "8020")
           click_on("Locate")
     expect(path).to eq ("/search")
     # with parameters visible in the url
@@ -23,4 +24,4 @@ describe "feature" do
       end
     end
   end
-end  
+end
