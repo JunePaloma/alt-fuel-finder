@@ -9,4 +9,9 @@ class StationMaker
     end
   end
 
+  def present_stations
+    stations = make_stations
+    stations.each do |station|
+      
+  end
 end

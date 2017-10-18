@@ -6,7 +6,7 @@ class StationService
   end
 
   def find_by_zip_code(zip_code)
-    response = @conn.get("api/alt-fuel-stations/v1/nearest.json?type=ELEC,LPG&limit=10& &location=#{zip_code}&radius=6&#{ENV["NREL_API_KEY"]}")
+    response = @conn.get("api/alt-fuel-stations/v1/nearest.json?type=ELEC,LPG&limit=10&location=#{zip_code}&radius=6&api_key=#{ENV["NREL_API_KEY"]}")
     JSON.parse(response.body, symbolize_names: true)
   end
 
