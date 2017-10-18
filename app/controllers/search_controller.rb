@@ -1,6 +1,7 @@
 class SearchController < ApplicationController
 
   def index
-  end 
+    @stations  = StationService.find_by_zip_code
+  end
 
 end
