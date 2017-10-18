@@ -1,7 +1,8 @@
 class SearchController < ApplicationController
 
   def index
-    @stations  = StationService.find_by_zip_code
+    stations_data= StationService.find_by_zip_code(params[:zip])
+    @stations = StationMaker.new(stations_data).make_stations
   end
 
 end
